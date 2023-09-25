@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      PG_DB_DSN : postgres://postgres:password@127.0.0.1:5439/
+
+  db:
+    image: postgres:latest
+    container_name: my-postgres-container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5439:5432" 
+      #5439 to avoid your local port postgres

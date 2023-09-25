@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "ddc567c5-64b8-487c-af96-093ba743b7e1",
+		"name": "GO BANK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23925341"
+	},
+	"item": [
+		{
+			"name": "Daftar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"admin\",\r\n    \"nik\":\"367292137218311\",\r\n    \"phone_number\": \"+62872621521\",\r\n    \"pin_number\":\"672536\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:3000/daftar",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "3000",
+					"path": [
+						"daftar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Balance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"admin\",\r\n    \"nik\":\"3672921372183\",\r\n    \"phone_number\": \"+6287262153547\",\r\n    \"pin_number\":\"672536\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:3000/saldo/313059122255",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "3000",
+					"path": [
+						"saldo",
+						"313059122255"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Index Mutasi",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"admin\",\r\n    \"nik\":\"3672921372183\",\r\n    \"phone_number\": \"+6287262153547\",\r\n    \"pin_number\":\"672536\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:3000/mutasi/313032902732",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "3000",
+					"path": [
+						"mutasi",
+						"313032902732"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tabung",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_number\":\"313032902732\",\r\n    \"nominal\":10000000   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:3000/tabung",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "3000",
+					"path": [
+						"tabung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tarik",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_number\":\"313015376744\",\r\n    \"nominal\":100000   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:3000/tarik",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "3000",
+					"path": [
+						"tarik"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "127.0.0.1"
+		}
+	]
+}
